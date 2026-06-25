@@ -138,3 +138,17 @@ javac -d bin -encoding UTF-8 src/**/*.java
 # 執行
 java -cp bin krusty_krab_competition.KrustyKrab_Controller
 ```
+
+---
+
+## 👥 團隊成員與分工
+
+本專案為團隊合作開發，以下為成員名單與主要分工：
+
+| 姓名 / 學號 | GitHub / 聯絡方式 | 主要分工與負責模組 |
+| :--- | :---: | :--- |
+| **Ian (你)** | [@your-username](https://github.com/your-username) | 設計模式整合、確認重玩功能、README 與環境部署 |
+| **組員 A** | [@member-a](https://github.com/member-a) | 換裝更衣室設計、Command 與 Decorator 模式實作 |
+| **組員 B** | [@member-b](https://github.com/member-b) | 遊戲主邏輯、分數統計與 Flyweight+Observer 模式 |
+
+> 💡 **提示**：你可以直接編輯此表格，填入你們組員的真實姓名、學號與負責分工！
