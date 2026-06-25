@@ -38,26 +38,26 @@
 graph TD
     subgraph State Pattern
         SC[StateContext] -->|執行狀態| AbsS[AbsState]
-        AbsS <|-- StatePrestart
-        AbsS <|-- StateStart
-        AbsS <|-- StateEnd
+        StatePrestart --> AbsS
+        StateStart --> AbsS
+        StateEnd --> AbsS
     end
 
     subgraph Command Pattern
         MC[MacroCommand] -->|記錄與復原| Cmd[Command]
-        Cmd <|-- SbChangeHat1
-        Cmd <|-- SbChangeHat2
-        Cmd <|-- PtChangeHat1
-        Cmd <|-- PtChangeHat2
+        SbChangeHat1 --> Cmd
+        SbChangeHat2 --> Cmd
+        PtChangeHat1 --> Cmd
+        PtChangeHat2 --> Cmd
         Cmd -->|控制接收者| Rec[Receiver]
     end
 
     subgraph Decorator Pattern
-        Comp[Component] <|-- ConcreteSb
-        Comp <|-- ConcretePt
-        Comp <|-- Decorator
-        Decorator <|-- CD_SbH1
-        Decorator <|-- CD_PtH1
+        ConcreteSb --> Comp[Component]
+        ConcretePt --> Comp
+        Decorator --> Comp
+        CD_SbH1 --> Decorator
+        CD_PtH1 --> Decorator
     end
 
     subgraph Iterator Pattern
@@ -74,8 +74,8 @@ graph TD
     subgraph Flyweight & Observer
         FWF[FlyweightFactory] -->|共用 Label| FWL[FlyweightLabel]
         Subj[ConcreteSubject] -->|通知分數變更| Obs[Observer]
-        Obs <|-- SbScoreLabel
-        Obs <|-- PtScoreLabel
+        SbScoreLabel --> Obs
+        PtScoreLabel --> Obs
     end
 ```
 
