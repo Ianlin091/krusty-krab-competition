@@ -1,0 +1,11 @@
+# Compile artifacts
+bin/
+test-output/
+*.class
+
+# IDE settings
+.idea/
+.settings/
+.classpath
+.project
+*.iml
