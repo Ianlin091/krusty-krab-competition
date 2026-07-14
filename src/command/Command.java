@@ -1,0 +1,7 @@
+package command;
+
+public abstract class Command {
+	public abstract void execute();
+	public abstract void redo();
+	public abstract void undo();
+}
